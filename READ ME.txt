@@ -1,0 +1,28 @@
+
+
+This is how I did it:
+
+
+I have input files to my program finalrsa.c:
+plain.txt
+plain2.txt
+genplain.txt
+
+I created DER format private key named as openss_priv1024.der in openssl(1024bit key)
+
+I parsed this openssl privatekey and retrieved the n,e,d values and encrypted and decrypted plain2.txt using my functions i wrote
+
+I also generated keys and saved those in DER formats in:
+private.der
+public.der
+
+Later,a prompt is asked if you want to encrypt and decrypt data file plain.txt using my program generated keys 
+and encrypted saved in cipher.txt
+
+Later,using commands to decrypt in openssl i used my private key and get back the data file encrypted using my private key in the program
+Now,cross compatibility checked.
+
+Now,take any genplain.txt and using my private.der and public.der performed encryption and decryption operations and verified.
+
+Cautious:remove cipher.txt before re compiling the program 
+
